@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 
 app.get('/api/metrics', async (req, res) => {
 
-    let tikTokMetrics = [455, "4300", "118.9k"];
+    let tikTokMetrics = [455, "4.3k", "118.9k"];
 
     try{
         tikTokMetrics = await getTikTokMetrics();
