@@ -1,0 +1,238 @@
+html {
+    /* base phone dimensions */
+    --height: 400px;
+    --width:calc(var(--height) * 375 / 812);
+    --border-radius: calc(var(--height) * 66 / 812);
+    --padding: calc(var(--height) * 26 / 812);
+    /* notch dimensions */
+    --notch-height: calc(var(--height)*30/812);
+    --notch-width: calc(var(--width)*210/375);
+    --notch-radius: calc(24/210 * var(--notch-width));
+    /* camera dimensions */
+
+
+    /* speaker dimensions */
+    --speaker-height: calc(.2 * var(--notch-height));
+    --speaker-width: calc(var(--notch-width)*2/7);
+    /* top-bar */
+    --top-bar-height: calc(var(--height)*3/812);
+
+    /* sleep dimensions */
+    --sleep-width: calc(var(--width) * 3/375);
+    --sleep-height: calc(var(--height)* 96/812);
+    /* bottom-bar */
+
+
+    /* volume */
+    --volume-height: calc(var(--height)*32/812);
+    --volume-ba-height: calc(var(--height)*62/812);
+    /* overflow */
+
+
+    /* shadows */
+
+
+
+}
+
+.marvel-device{
+display:inline-block;
+position:relative;
+-webkit-box-sizing:content-box !important;
+box-sizing:content-box !important
+}
+
+.marvel-device .screen{
+width:100%;
+position:relative;
+height:100%;
+z-index:3;
+background:white;
+overflow:hidden;
+display:block;
+border-radius:1px;
+-webkit-box-shadow:0 0 0 3px #111;
+box-shadow:0 0 0 3px #111
+}
+
+.marvel-device .top-bar,.marvel-device .bottom-bar{
+height:var(--top-bar-height);
+background:black;
+width:100%;
+display:block;
+}
+
+.marvel-device.iphone-x{
+width:var(--width);
+height:var(--height);
+padding:var(--padding);
+background:#fdfdfd;
+-webkit-box-shadow:inset 0 0 11px 0 black;
+box-shadow:inset 0 0 11px 0 black;
+border-radius: var(--border-radius);
+}
+
+.marvel-device.iphone-x .overflow{
+width:100%;
+height:100%;
+position:absolute;
+top:0;
+left:0;
+border-radius:var(--border-radius);
+overflow:hidden
+}
+
+.marvel-device.iphone-x .shadow{
+border-radius:100%;
+width:90px;
+height:90px;
+position:absolute;
+background:radial-gradient(ellipse at center, rgba(0,0,0,0.6) 0%, rgba(255,255,255,0) 60%)
+}
+
+.marvel-device.iphone-x .shadow--tl{
+top:-20px;
+left:-20px
+}
+
+.marvel-device.iphone-x .shadow--tr{
+top:-20px;
+right:-20px
+}
+
+.marvel-device.iphone-x .shadow--bl{
+bottom:-20px;
+left:-20px
+}
+
+.marvel-device.iphone-x .shadow--br{
+bottom:-20px;
+right:-20px
+}
+
+.marvel-device.iphone-x:before{
+    --before-width: var(--width) + 2 * var(--padding);
+    --before-height: var(--height) + 2 * var(--padding);
+    --before-top-offset: calc(var(--height)*5/812);
+    --before-left-offset: calc(var(--width)*5/375);
+width:calc(var(--before-width) - 2 * var(--before-left-offset));
+height:calc(var(--before-height) - 2 * var(--before-top-offset));
+position:absolute;
+top:var(--before-top-offset);
+content:'';
+left:var(--before-left-offset);
+border-radius:calc(var(--border-radius)*61/66);
+background:black;
+z-index:1
+}
+
+.marvel-device.iphone-x .inner-shadow{
+    --inner-shadow-width: calc(var(--padding)*20/26);
+width:calc(100% - var(--inner-shadow-width));
+height:calc(100% - var(--inner-shadow-width));
+position:absolute;
+top:calc(var(--height)*10/812);
+overflow:hidden;
+left:calc(var(--width)*10/375);
+border-radius:calc(var(--border-radius) - var(--border-radius)*10/66);
+-webkit-box-shadow:inset 0 0 calc( var(--width) * 15 / 375) 0 rgba(255,255,255,0.66);
+box-shadow:inset 0 0 calc( var(--width) * 15 / 375) 0 rgba(255,255,255,0.66);
+z-index:1;
+}
+
+.marvel-device.iphone-x .inner-shadow:before{
+-webkit-box-shadow:inset 0 0 calc( var(--height) * 20 / 812) 0 #FFFFFF;
+box-shadow:inset 0 0 calc( var(--height) * 20 / 812) 0 #FFFFFF;
+width:100%;
+height:116%;
+position:absolute;
+top:-8%;
+content:'';
+left:0;
+border-radius:calc(var(--width) * 200 / 375) / calc(var(--height) * 112 / 812);
+z-index:2
+}
+
+.marvel-device.iphone-x .volume,.marvel-device.iphone-x .volume:before,.marvel-device.iphone-x .volume:after,.marvel-device.iphone-x .sleep{
+width:var(--sleep-width);
+background:#b5b5b5;
+position:absolute;
+}
+
+.marvel-device.iphone-x .volume{
+left:calc(-1*var(--sleep-width));
+top:calc(var(--height)*116/812);
+height:var(--volume-height);
+}
+
+.marvel-device.iphone-x .volume:before{
+height:var(--volume-ba-height);
+top:calc(var(--volume-height)*62/32);
+content:'';
+left:0
+}
+
+.marvel-device.iphone-x .volume:after{
+height:var(--volume-ba-height);
+top:calc(var(--volume-height)*140/32);
+content:'';
+left:0
+}
+
+.marvel-device.iphone-x .sleep{
+height:var(--sleep-height);
+top:calc(var(--height)* 200/812);
+right:calc(-1 * var(--sleep-width));
+}
+
+.marvel-device.iphone-x .camera{
+width:calc(.2 * var(--notch-height));
+height:calc(.2 * var(--notch-height));
+top:calc(.3 * var(--notch-height));
+border-radius:100%;
+position:absolute;
+left:calc(var(--notch-width) * 154/210);
+background:#0d4d71;
+}
+
+.marvel-device.iphone-x .speaker{
+height:var(--speaker-height);
+width:var(--speaker-width);
+left:50%;
+position:absolute;
+top:calc(.3 * var(--notch-height));
+margin-left:calc(var(--notch-width)*-1/7);
+background:#171818;
+border-radius:var(--speaker-height);
+}
+
+.marvel-device.iphone-x .notch{
+position:absolute;
+width:var(--notch-width);
+height:var(--notch-height);
+top:calc(var(--height)*26/812);
+left:calc(var(--width)*.288);
+z-index:4;
+background:black;
+border-bottom-left-radius:var(--notch-radius);
+border-bottom-right-radius:var(--notch-radius);
+}
+
+.marvel-device.iphone-x .notch:before,.marvel-device.iphone-x .notch:after{
+content:'';
+height:calc(var(--notch-radius)/3);
+/* height: calc(8/var(--notch-height)); */
+position:absolute;
+top:0;
+width: calc(var(--notch-radius)/3);
+}
+
+.marvel-device.iphone-x .notch:after{
+background:radial-gradient(circle at bottom left, transparent 0, transparent 70%, black 70%, black 100%);
+left:calc(-1*var(--notch-radius)/3)
+}
+
+.marvel-device.iphone-x .notch:before{
+background:radial-gradient(circle at bottom right, transparent 0, transparent 70%, black 70%, black 100%);
+right:calc(-1*var(--notch-radius)/3);
+}

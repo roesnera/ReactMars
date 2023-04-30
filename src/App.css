@@ -1,0 +1,433 @@
+/* @font-face {font-family: "Architype Bayer-type"; src: url("//db.onlinewebfonts.com/t/a959448c957069dae7d52078616ebdc8.eot"); src: url("//db.onlinewebfonts.com/t/a959448c957069dae7d52078616ebdc8.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/a959448c957069dae7d52078616ebdc8.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/a959448c957069dae7d52078616ebdc8.woff") format("woff"), url("//db.onlinewebfonts.com/t/a959448c957069dae7d52078616ebdc8.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/a959448c957069dae7d52078616ebdc8.svg#Architype Bayer-type") format("svg"); } */
+@font-face {
+    font-family: "Beth Ellen";
+    src: url("./resources/fonts/BethEllen-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Garamond";
+    src: url("./resources/fonts/CormorantGaramond-Regular.ttf");
+    font-weight: 400;
+}
+
+/* @font-face {
+    font-family: "Garamond";
+    src: url("./resources/fonts/CormorantGaramond-Light.ttf");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Garamond";
+    src: url("./resources/fonts/CormorantGaramond-Medium.ttf");
+    font-weight: 500;
+} */
+
+
+html, * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    font-family: 'Garamond';
+    font-weight: 400;
+    text-transform: lowercase;
+    --color-primary: #dcd9d2;
+    --color-secondary: #e9f39d;
+    --color-tertiary: #4e463a;
+    --color-tertiary-light: #70695d;
+    --padding-horizontal: 4rem;
+    --title-font-size: 8.5rem;
+}
+
+@media (width > 1400px) {
+    html {
+        --padding-horizontal: 10rem;
+    }
+}
+
+@media (width > 1800px) {
+    html {
+        font-size: 140%;
+    }
+}
+
+@media (width < 1000px) {
+    html {
+        font-size: 80%;
+        --padding-horizontal: .5rem;
+    }
+}
+
+@media (width < 600px) {
+    html {
+        font-size: 70%;
+        --title-font-size: 6.5rem;
+    }
+
+}
+
+@media (width < 400px) {
+    html {
+        --title-font-size: 5.5rem;
+    }
+}
+
+/* Utilities */
+
+.flex-container {
+    display: flex;
+}
+
+.grid-container {
+    display: grid;
+}
+
+.center-hor-vert {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 65vh;
+    position: relative;
+    color: var(--color-secondary);
+    background: url("./resources/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    isolation: isolate;
+}
+
+.title {
+    font-family: 'Beth Ellen';
+    font-size: var(--title-font-size);
+    padding: 1rem 2rem;
+}
+
+.width-fix {
+
+    width: 70%;
+
+}
+
+.subtitle {
+    font-weight: 200;
+    font-size: 1.3em;
+    justify-content: space-between;
+    align-items: center;
+    background: inherit;
+    /* color: #fff; */
+}
+
+.subtitle span {
+    font-size: 1.7em;
+}
+
+.subtitle * {
+    padding: 0 .2rem;
+    /* color: white; */
+    mix-blend-mode: difference;
+}
+
+.email {
+    margin-top: 3rem;
+    text-decoration: none;
+    color: var(--color-secondary);
+    font-size: 1.7em;
+    font-family: inherit;
+}
+
+.socials {
+    position: absolute;
+    bottom: 2rem;
+    left: var(--padding-horizontal);
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 26%;
+}
+
+@media (width > 1300px) {
+    .socials {
+        width: 18%;
+    }
+}
+
+@media (width > 1800px) {
+    .socials {
+        width: 12%;
+    }
+}
+
+.social-svg svg {
+    display: inline;
+    fill: var(--color-secondary);
+}
+
+/* MAIN SECTION */
+
+main {
+    background-color: var(--color-primary);
+}
+
+.section {
+    /* min-height: 100vh; */
+    padding: .5rem var(--padding-horizontal);
+}
+
+.section-title {
+    font-family: 'Beth Ellen';
+    color: var(--color-secondary);
+    font-size: var(--title-font-size);
+}
+
+/* Section 1: VIDEO */
+
+.video-grid {
+    margin-top: 2rem;
+    /* height: 80vh; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+@media (width < 455px) {
+    .video-grid {
+        justify-content: center;
+    }
+}
+
+.phone-item {
+    flex-basis: 30%;
+    display: grid;
+    justify-content: center;
+}
+
+.screen__1 {
+    background: url("./resources/clowncore.PNG");
+}
+
+.screen__2 {
+    background: url("./resources/pisces.PNG");
+}
+
+.screen__3 {
+    background: url("./resources/sping_outifts.PNG");
+}
+
+.screen__4 {
+    background: url("./resources/coachella.PNG");
+}
+
+
+.screen__5 {
+    background: url("./resources/pisces_horoscopes.PNG");
+}
+
+
+.screen__6 {
+    background: url("./resources/style_beads_w_me.PNG");
+}
+
+.phone-screen {
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    z-index: 1;
+    inset: var(--padding);
+    border-radius: calc(3*var(--border-radius)/5);
+    position: absolute;
+}
+
+
+/* Section 2: PHOTO */
+
+.picture-group {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    /* height: 70vh; */
+    margin-top: 2rem;
+}
+
+@media (width<800px) {
+    .picture-group {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.picture__1 {
+    background: url("./resources/silver_gloves.jpg");
+}
+
+.picture__2 {
+    background: url("./resources/bathing_suit.jpg");
+}
+
+.picture__3 {
+    background: url("./resources/pinstripe_corset.jpg");
+}
+
+.picture__4 {
+    background: url("./resources/white_top.jpg");
+}
+
+.picture__5 {
+    background: url("./resources/26_cake.jpg");
+}
+
+.picture__6 {
+    background: url("./resources/fuzzy_ears.jpg");
+}
+
+.picture {
+    background-position: center;
+    background-size: cover;
+    aspect-ratio: 1 / 1;
+}
+
+/* Section 3: METRICS */
+
+.metrics-section {
+    /* height: 100vh; */
+    font-size: 3rem;
+    color: var(--color-tertiary);
+}
+
+.metric-box {
+    margin: 3rem 0;
+}
+
+.darken {
+    margin: 6rem 0;
+    /* max-width: 80rem; */
+    position: relative;
+    isolation: isolate;
+}
+
+.darken::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0, .25);
+    z-index: 100;
+}
+
+.darken-flex {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.darken-flex-item {
+    margin: 0 1.5rem;
+    padding: .3rem;
+}
+
+.metric-subtitle {
+    color: var(--color-tertiary-light);
+    margin: 2rem 0;
+}
+
+/* Section 4: PACKAGES */
+
+.packages-container {
+    margin-top: 3rem;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: [zero] 40% [midline] auto [end];
+    gap: 2rem;
+    /* height: 70vh; */
+    color: var(--color-tertiary)
+}
+
+.packages-container h4 {
+    font-size: 3.6rem;
+}
+
+.package-item {
+    border: 4px solid #a08e6b;
+    font-size: 2rem;
+    padding: .3rem 1rem;
+}
+
+@media (width < 800px) {
+    .packages-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: [zero] 20% [midline] auto [end];
+    }
+
+    .packages-right-col {
+        grid-row-start: end;
+        padding: 0;
+    }
+}
+
+.packages-right-col {
+    border: none;
+    display: grid;
+    grid-template-rows: 5.5rem calc(100% - 5.5rem - 4px);
+    row-gap: 8px;
+    margin-top: -.3rem;
+}
+
+.package-right-col-small {
+    padding: 0 1rem;
+    font-size: 1.8rem;
+}
+
+
+/* Section 5: OFFERINGS */
+
+.offerings-section {
+    margin-top: 5rem;
+}
+
+.offerings-grid {
+    /* height: 60vh; */
+    margin-top: 2rem;
+    grid-template-columns: 55% auto;
+    gap: 1rem;
+    color: var(--color-tertiary);
+}
+
+.offerings-grid li {
+    margin: .7rem 0;
+}
+
+.offerings-left {
+    font-size: 1.4rem;
+    padding-left: 2rem;
+}
+
+.offerings-right {
+    /* padding-left: 1rem; */
+    font-size: 1.7rem;
+}
+
+.offerings-subtitle {
+    color: var(--color-tertiary-light);
+}
+
+.offerings-right li {
+    margin-left: 1.5rem;
+}
+
+/* Section 6: WHY */
+
+.why-section {
+    /* height: 60vh; */
+    margin-top: 5rem;
+}
+
+.why-section p {
+    font-size: 2.2rem;
+    margin: 2rem 0;
+}
