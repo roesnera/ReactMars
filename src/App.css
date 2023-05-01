@@ -1,24 +1,24 @@
 /* @font-face {font-family: "Architype Bayer-type"; src: url("//db.onlinewebfonts.com/t/a959448c957069dae7d52078616ebdc8.eot"); src: url("//db.onlinewebfonts.com/t/a959448c957069dae7d52078616ebdc8.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/a959448c957069dae7d52078616ebdc8.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/a959448c957069dae7d52078616ebdc8.woff") format("woff"), url("//db.onlinewebfonts.com/t/a959448c957069dae7d52078616ebdc8.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/a959448c957069dae7d52078616ebdc8.svg#Architype Bayer-type") format("svg"); } */
 @font-face {
     font-family: "Beth Ellen";
-    src: url("./resources/fonts/BethEllen-Regular.ttf");
+    src: url("../resources/fonts/BethEllen-Regular.ttf");
 }
 
 @font-face {
     font-family: "Garamond";
-    src: url("./resources/fonts/CormorantGaramond-Regular.ttf");
+    src: url("../resources/fonts/CormorantGaramond-Regular.ttf");
     font-weight: 400;
 }
 
 /* @font-face {
     font-family: "Garamond";
-    src: url("./resources/fonts/CormorantGaramond-Light.ttf");
+    src: url("../resources/fonts/CormorantGaramond-Light.ttf");
     font-weight: 300;
 }
 
 @font-face {
     font-family: "Garamond";
-    src: url("./resources/fonts/CormorantGaramond-Medium.ttf");
+    src: url("../resources/fonts/CormorantGaramond-Medium.ttf");
     font-weight: 500;
 } */
 
@@ -99,7 +99,7 @@ html {
     min-height: 65vh;
     position: relative;
     color: var(--color-secondary);
-    background: url("./resources/hero.jpg");
+    background: url("../resources/hero.jpg");
     background-size: cover;
     background-position: center;
     isolation: isolate;
@@ -213,29 +213,29 @@ main {
 }
 
 .screen__1 {
-    background: url("./resources/clowncore.jpg");
+    background: url("../resources/clowncore.jpg");
 }
 
 .screen__2 {
-    background: url("./resources/pisces.jpg");
+    background: url("../resources/pisces.jpg");
 }
 
 .screen__3 {
-    background: url("./resources/sping_outifts.jpg");
+    background: url("../resources/sping_outifts.jpg");
 }
 
 .screen__4 {
-    background: url("./resources/coachella.jpg");
+    background: url("../resources/coachella.jpg");
 }
 
 
 .screen__5 {
-    background: url("./resources/pisces_horoscopes.jpg");
+    background: url("../resources/pisces_horoscopes.jpg");
 }
 
 
 .screen__6 {
-    background: url("./resources/style_beads_w_me.jpg");
+    background: url("../resources/style_beads_w_me.jpg");
 }
 
 .phone-screen {
@@ -265,27 +265,27 @@ main {
 }
 
 .picture__1 {
-    background: url("./resources/silver_gloves.jpg");
+    background: url("../resources/silver_gloves.jpg");
 }
 
 .picture__2 {
-    background: url("./resources/bathing_suit.jpg");
+    background: url("../resources/bathing_suit.jpg");
 }
 
 .picture__3 {
-    background: url("./resources/pinstripe_corset.jpg");
+    background: url("../resources/pinstripe_corset.jpg");
 }
 
 .picture__4 {
-    background: url("./resources/white_top.jpg");
+    background: url("../resources/white_top.jpg");
 }
 
 .picture__5 {
-    background: url("./resources/26_cake.jpg");
+    background: url("../resources/26_cake.jpg");
 }
 
 .picture__6 {
-    background: url("./resources/fuzzy_ears.jpg");
+    background: url("../resources/fuzzy_ears.jpg");
 }
 
 .picture {
