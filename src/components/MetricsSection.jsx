@@ -1,25 +1,12 @@
-import { useEffect, useState } from "react";
 
 
 function MetricsSection() {
 
-    const [metrics, updateMetrics] = useState([]);
-
-    const getMetrics = async () => {
-        const response =  await fetch("/api/metrics");
-        const { followers, likes } = await response.json();
-        updateMetrics([followers, likes]);
-    }
-
-    useEffect(() => {
-        getMetrics();
-    }, []);
-
     return (<section className="section metrics-section">
     <h2 className="section-title">metrics</h2>
     <div className="metric-box">
-        <p><span>{metrics[0]}</span> tiktok followers</p>
-        <p><span>{metrics[1]}</span> likes</p>
+        <p>4.3k tiktok followers</p>
+        <p>118.9k likes</p>
         <p>1.8k instagram followers</p>
     </div>
     <div className="darken">

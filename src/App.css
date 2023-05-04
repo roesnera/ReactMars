@@ -246,6 +246,35 @@ main {
     background: url("../resources/style_beads_w_me.jpg");
 }
 
+@media (width < 1600px) {
+    
+.screen__1 {
+    background: url("../resources/clowncore_small.jpg");
+}
+
+.screen__2 {
+    background: url("../resources/pisces_small.jpg");
+}
+
+.screen__3 {
+    background: url("../resources/sping_outifts_small.jpg");
+}
+
+.screen__4 {
+    background: url("../resources/coachella_small.jpg");
+}
+
+
+.screen__5 {
+    background: url("../resources/pisces_horoscopes_small.jpg");
+}
+
+
+.screen__6 {
+    background: url("../resources/style_beads_w_me_small.jpg");
+}
+}
+
 .phone-screen {
     background-size: cover;
     background-position: center;
@@ -295,6 +324,34 @@ main {
 .picture__6 {
     background: url("../resources/fuzzy_ears.jpg");
 }
+
+@media (width < 1200px) {
+    
+.picture__1 {
+    background: url("../resources/silver_gloves_small.jpg");
+}
+
+.picture__2 {
+    background: url("../resources/bathing_suit_small.jpg");
+}
+
+.picture__3 {
+    background: url("../resources/pinstripe_corset_small.jpg");
+}
+
+.picture__4 {
+    background: url("../resources/white_top_small.jpg");
+}
+
+.picture__5 {
+    background: url("../resources/26_cake_small.jpg");
+}
+
+.picture__6 {
+    background: url("../resources/fuzzy_ears_small.jpg");
+}
+}
+
 
 .picture {
     background-position: center;
