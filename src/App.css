@@ -105,6 +105,12 @@ html {
     isolation: isolate;
 }
 
+@media (width < 600px) {
+    .hero {
+        min-height: 55vh;
+    }
+}
+
 .title {
     font-family: 'Beth Ellen';
     font-size: var(--title-font-size);
