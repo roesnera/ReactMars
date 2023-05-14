@@ -193,6 +193,12 @@ html {
     }
 }
 
+@media (width < 600px) {
+    .socials {
+        width: 33%;
+    }
+}
+
 .social-svg svg {
     display: inline;
     fill: var(--color-secondary);
