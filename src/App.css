@@ -96,7 +96,7 @@ html {
 /* HERO SECTION */
 
 .hero {
-    min-height: 65vh;
+    min-height: 75vh;
     position: relative;
     color: var(--color-secondary);
     background: url("../resources/hero.jpg");
@@ -140,6 +140,12 @@ html {
     /* color: #fff; */
 }
 
+@media (width > 900px) {
+    .subtitle {
+        margin-top: -4rem;
+    }
+}
+
 .subtitle span {
     font-size: 1.7em;
 }
@@ -169,6 +175,12 @@ html {
     width: 26%;
 }
 
+@media (width > 900px) {
+    .socials {
+        width: 20%;
+    }
+}
+
 @media (width > 1300px) {
     .socials {
         width: 18%;
@@ -178,6 +190,12 @@ html {
 @media (width > 1800px) {
     .socials {
         width: 12%;
+    }
+}
+
+@media (width < 600px) {
+    .socials {
+        width: 33%;
     }
 }
 
