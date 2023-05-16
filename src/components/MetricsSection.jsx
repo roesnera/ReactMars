@@ -5,8 +5,8 @@ function MetricsSection() {
     return (<section className="section metrics-section">
     <h2 className="section-title">metrics</h2>
     <div className="metric-box">
-        <p>4.3k tiktok followers</p>
-        <p>118.9k likes</p>
+        <p>5,4k tiktok followers</p>
+        <p>120.4k likes</p>
         <p>1.8k instagram followers</p>
     </div>
     <div className="darken">
