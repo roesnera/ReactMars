@@ -1,13 +1,41 @@
+import axios from "axios";
+import { useEffect } from "react";
+import { useState } from "react";
 
 
 function MetricsSection() {
+    const [metrics, setMetrics] = useState({
+        tikTokFollowers: "5378",
+        tikTokLikes: "122K",
+        instagramFollowers: "1.8k"
+    });
+
+    useEffect(() => {
+        fetchMetrics();
+    }, []);
+
+    async function fetchMetrics() {
+        try{
+        const metricObjArray = await axios.get("http://18.191.195.174/api/v1/metrics/peek");
+        console.log(metricObjArray.data);
+        const metricArrLength =  await metricObjArray.data.length;
+        console.log(metricArrLength);
+        const latestMetric = await metricObjArray.data[metricArrLength-1];
+        console.log(latestMetric);
+        setMetrics(latestMetric);
+        } catch (err) {
+            console.error(err);
+        }
+    }
+
+    const { tikTokFollowers, tikTokLikes, instagramFollowers } = metrics;
 
     return (<section className="section metrics-section">
     <h2 className="section-title">metrics</h2>
     <div className="metric-box">
-        <p>5,4k tiktok followers</p>
-        <p>120.4k likes</p>
-        <p>1.8k instagram followers</p>
+        <p>{tikTokFollowers} tiktok followers</p>
+        <p>{tikTokLikes} likes</p>
+        <p>{instagramFollowers} instagram followers</p>
     </div>
     <div className="darken">
         <p className="flex-container darken-flex">
