@@ -16,7 +16,7 @@ function MetricsSection() {
 
     async function fetchMetrics() {
         try{
-        const metricObjArray = await axios.get("http://18.191.195.174/api/v1/metrics/peek");
+        const metricObjArray = await axios.get("https://adamsapi.xyz/api/v1/metrics/peek");
         console.log(metricObjArray.data);
         const metricArrLength =  await metricObjArray.data.length;
         console.log(metricArrLength);
